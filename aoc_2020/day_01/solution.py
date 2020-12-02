@@ -1,24 +1,22 @@
 #!/usr/local/bin/python
 
-import pathlib
+from lib.helpers import load_input
 
 def main():
-    input_path = pathlib.Path(__file__).parent.absolute() / 'input.txt'
-    with input_path.open('r') as file:
-        lines = [int(line) for line in file.readlines() if line.strip() != '']
+    data = [int(line) for line in load_input(__file__)]
 
     # Part 1:  Find the 2 numbers in the list that sum to 2020, print their product
-    for line in lines:
-        if (2020 - line) in lines:
+    for line in data:
+        if (2020 - line) in data:
             print(line*(2020-line))
             break
 
     # Part 2:  Find the 3 numbers in the list that sum to 2020, print their product
-    for i in range(len(lines)):
-        for j in range(i+1, len(lines)):
-            x = lines[i]
-            y = lines[j]
-            if (2020 - x - y) in lines[j+1:]:
+    for i in range(len(data)):
+        for j in range(i+1, len(data)):
+            x = data[i]
+            y = data[j]
+            if (2020 - x - y) in data[j+1:]:
                 print(x*y*(2020-x-y))
                 return
 
