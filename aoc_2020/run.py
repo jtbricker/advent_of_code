@@ -7,14 +7,11 @@ import importlib
 
 def main(which_days):
     for day in which_days:
-        try:
-            day_module = importlib.import_module(
-                'day_{0:02d}'.format(day))
-            print("Solutions to Day {0:02d}\n-------------------".format(day))
-            day_module.main()
-            print('')
-        except Exception as e:
-            print(e)
+        day_module = importlib.import_module(
+            'day_{0:02d}'.format(day))
+        print("Solutions to Day {0:02d}\n-------------------".format(day))
+        day_module.main()
+        print('')
 
 
 if __name__ == "__main__":
