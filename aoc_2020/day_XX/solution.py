@@ -6,7 +6,7 @@ def part_1(data):
     Args:
         data ([type]): [description]
     """
-    return 
+    return "Part 1 Not Implemented"
 
 def part_2(data):
     """[summary]
@@ -14,6 +14,7 @@ def part_2(data):
     Args:
         data ([type]): [description]
     """
+    return "Part 2 Not Implemented"
 
 def main():
     data = load_input(__file__)
