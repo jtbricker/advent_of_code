@@ -6,6 +6,9 @@ def part_1(data):
     Args:
         data ([type]): [description]
     """
+
+    for d in data:
+        print(d)
     return "Part 1 Not Implemented"
 
 def part_2(data):
@@ -18,11 +21,6 @@ def part_2(data):
 
 def main():
     data = load_input(__file__)
-
-    # Remove this #########
-    for d in data:
-        print(d)
-    #######################
 
     print(part_1(data))
     print(part_2(data))
