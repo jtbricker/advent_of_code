@@ -5,6 +5,9 @@ def part_1(data):
 
     Args:
         data ([type]): [description]
+
+    Returns:
+        [type]: [description]
     """
 
     for d in data:
@@ -16,6 +19,9 @@ def part_2(data):
 
     Args:
         data ([type]): [description]
+
+    Returns:
+        [type]: [description]
     """
     return "Part 2 Not Implemented"
 
