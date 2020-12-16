@@ -23,7 +23,9 @@ class TestSolution(unittest.TestCase):
 
 
 def run_tests():
-    suite = unittest.TestSuite(map(TestSolution, filter(lambda x: x.startswith('test_'), dir(TestSolution))))
+    exclude = []
+    tests = filter(lambda x: x.startswith('test_') and x not in exclude, dir(TestSolution))
+    suite = unittest.TestSuite(map(TestSolution, tests))
     results = unittest.TextTestRunner().run(suite)
 
 if __name__ == "__main__":
