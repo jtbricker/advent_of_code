@@ -1,5 +1,10 @@
 from lib.helpers import load_input
 
+def parse_data(data):
+    # Override if you need to parse the data in
+    # a particular way before doing work
+    return data
+
 def part_1(data):
     """[summary]
 
@@ -9,6 +14,7 @@ def part_1(data):
     Returns:
         [type]: [description]
     """
+    data = parse_data(data)
 
     for d in data:
         print(d)
@@ -23,6 +29,8 @@ def part_2(data):
     Returns:
         [type]: [description]
     """
+    data = parse_data(data)
+    
     return "Part 2 Not Implemented"
 
 def main():
