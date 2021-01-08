@@ -7,5 +7,12 @@
   * This Creates the `day_##` package folder with a `solution.py` file for the solution and `input.txt` with the programs puzzle input.
 
 ## Run the solution(s)
+
 * Use the `run.py` script, optionally passing in the day you want to run (by default it will run all days)
   * e.g. `./run.py 3` will run the `main()` method located in `day_03/solution.py`
+
+## Run tests
+
+* Ensure that you are in the virtual environment
+* Pass the -t/--test flag to the run script
+  * `python ./run.py <day> -t`
