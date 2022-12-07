@@ -1,5 +1,11 @@
 from pathlib import Path
 
+def load_input_raw(file: str, input_file_name:str='input.txt'):
+    input_path = Path(file).parent.absolute() / input_file_name
+
+    with input_path.open('r') as file:
+        return [line for line in file.readlines()]
+
 def load_input(file: str, input_file_name:str='input.txt'):
     input_path = Path(file).parent.absolute() / input_file_name
 
