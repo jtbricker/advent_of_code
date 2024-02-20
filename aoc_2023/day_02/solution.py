@@ -1,5 +1,9 @@
 from lib.helpers import load_input
 
+class Something:
+    def __init__(self):
+        pass
+    
 class CubeSet:
     def __init__(self, red, green, blue):
         self.red = red
